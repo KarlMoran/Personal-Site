@@ -21,7 +21,7 @@ class About(models.Model):
     career = models.CharField(max_length=20)
     description = models.TextField(blank=False)
     profile_img = models.ImageField(upload_to='profile/')
-    
+  
     updated = models.DateTimeField(auto_now=True)
 
     def __str__(self):
@@ -54,8 +54,6 @@ class Skills(models.Model):
     category = models.ForeignKey(Category,
                                 on_delete=models.CASCADE)
     skill_name = models.CharField(max_length=20)
-
-    
 
 # PORTFOLIO SECTION
 
